@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="imgs/authLogo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AuthPass</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="firstBubble">
+            <h1>🔒 Gere senhas fortes e personalizadas para suas contas!</h1>
+            <h2>Combine letras, números e símbolos para proteger suas aplicações com total segurança.</h2>
+        </div>
+
+        <div class="generateContainer">
+            <div class="infosCreatePasswordContainer">
+                <p>Escolha a quantidade de caracteres abaixo e gere sua senha</p>
+                <div class="inputContainer">
+                    <input type="range" name="" id="sliderInput" value="8" min="2" max="50" class="passInput">
+                    <span class="qtd" id="qtdPassword">8</span>
+                </div>
+
+
+                <div class="passOptionsContainer">
+                    <div class="box">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="option-check" id="ckbMaiuscula" checked>
+                            <span class="checkmark"></span>
+                            <span class="label-text">Maiúsculas</span>
+                        </label>
+                    </div>
+                    <div class="box">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="option-check" id="ckbMinuscula" checked>
+                            <span class="checkmark"></span>
+                            <span class="label-text">Minúsculas</span>
+                        </label>
+                    </div>
+                    <div class="box">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="option-check" id="ckbSimbolos" checked>
+                            <span class="checkmark"></span>
+                            <span class="label-text">Simbolos</span>
+                        </label>
+                    </div>
+                    <div class="box">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="option-check" id="ckbNumeros" checked>
+                            <span class="checkmark"></span>
+                            <span class="label-text">Números</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="inputGenerate">
+                <div class="passContent" id="passContent"></div>
+                <div class="inputButtonsContainer">
+                    <button class="inputPassIcon" onclick="generatePassword(slider.value)">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                    <button class="inputPassIcon" onclick="copyPass(senhaGlobal)">
+                        <i class="fa-regular fa-copy" id="copyIconChange"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="strengthBarContainer"></div>
+            <span class="strengthLabel">Forte</span>
+        </div>
+
+        <div class="praticasContainer">
+            <h1>Considere também seguir boas práticas na criação de suas senhas</h1>
+
+            <div class="praticasBox">
+                <div class="praticas">
+                    <p>
+                        <span class="praticasTitle">Aposte no Tamanho e crie Passphrases (Frases de
+                            Acesso)<br><br></span>
+
+                        O comprimento da senha é o fator mais crítico contra ataques de força bruta. Em vez de criar
+                        senhas curtas e complexas e difíceis de lembrar (como K9#mP!2), prefira combinar de 3 a 4
+                        palavras aleatórias sem relação entre si (ex: CaféCachorroNuvem99!).
+                    </p><br>
+                    <p>
+                        <span class="praticasTitle">Por que adotar <br><br></span> Senhas longas (a partir de 12 a 16
+                        caracteres) exigem um poder computacional exponencialmente maior dos hackers para serem
+                        descobertas, além de serem muito mais fáceis de memorizar.
+                    </p>
+                </div>
+                <div class="praticas">
+                    <p>
+                        <span class="praticasTitle">Nunca Reutilize a Mesma Senha em Serviços Diferentes<br><br></span>
+
+                        Cada conta deve ter uma credencial única. Se você usa a mesma senha no e-mail, na rede social e
+                        no e-commerce, o vazamento de dados de um único site expõe todas as suas outras contas
+                        instantaneamente (ataque do tipo Credential Stuffing).
+                    </p><br>
+                    <p>
+                        <span class="praticasTitle">Por que adotar <br><br></span> Garantir senhas exclusivas funciona
+                        como o sistema de compartimentos selados de um navio: se um serviço for comprometido, a invasão
+                        fica isolada e não afeta o restante da sua vida digital.
+                    </p>
+                </div>
+                <div class="praticas">
+                    <p>
+                        <span class="praticasTitle">Misture Diversos Tipos de Caracteres e Evite Padrões Pessoais<br><br></span>
+
+                        Combine letras maiúsculas, minúsculas, números e símbolos especiais. Elimine qualquer informação óbvia, como datas de aniversário, nomes de familiares, placas de carro, sequências do teclado (como 123456 ou qwerty) ou substituições simples (como trocar a letra "a" por "@").
+                    </p><br>
+                    <p>
+                        <span class="praticasTitle">Por que adotar <br><br></span> Algoritmos modernos de quebra de senha testam automaticamente dados pessoais públicos e variações comuns de palavras de dicionário em milissegundos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col brand-col">
+                <h3 class="footer-logo">🔒 AuthPass</h3>
+                <p class="footer-desc">
+                    Gerador de senhas seguras e personalizáveis desenvolvido para proteger suas contas e dados online.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Navegação</h4>
+                <ul class="footer-links">
+                    <li><a href="#gerador">Gerador</a></li>
+                    <li><a href="#dicas">Dicas de Segurança</a></li>
+                    <li><a href="#faq">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Projeto</h4>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/lucasbsantoss/AuthPass" target="_blank" rel="noopener">Código
+                            Fonte</a></li>
+                    <li><a href="https://github.com/lucasbsantoss/AuthPass" target="_blank"
+                            rel="noopener">Documentação</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Desenvolvedor</h4>
+                <div class="social-links">
+                    <a href="https://github.com/lucasbsantoss" target="_blank" aria-label="GitHub"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/lucassantos3120/" target="_blank" aria-label="LinkedIn"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 AuthPass. Desenvolvido por <a href="https://github.com/lucasbsantoss" target="_blank">Lucas
+                    Santos</a>.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

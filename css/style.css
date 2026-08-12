@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --cor_principal: #236a9a;
+    --cor_secundaria: #6abaf0;
+    --cor_terciaria: #112635;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--cor_secundaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 0 15% 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.firstBubble {
+    width: 45%;
+    border-radius: 10px;
+    padding: 3%;
+    margin-bottom: 10%;
+    text-align: center;
+    background-color: var(--cor_principal);
+    color: #fff;
+}
+
+.firstBubble>h1 {
+    margin-bottom: 40px;
+}
+
+.generateContainer {
+    background-color: var(--cor_principal);
+    width: 45%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18pt;
+    padding: 1%;
+    margin-bottom: 15%;
+    color: #fff;
+}
+
+.generateContainer>p {
+    padding-bottom: 50px;
+}
+
+.inputGenerate {
+    background-color: var(--cor_terciaria);
+    width: 90%;
+    padding: 3%;
+    border-radius: 12px;
+    text-indent: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    gap: 10px;
+}
+
+.inputButtonsContainer {
+    display: flex;
+    gap: 15px;
+}
+
+.inputPassIcon {
+    border: none;
+    background-color: #fff;
+    border-radius: 12px;
+    font-size: 18pt;
+    transition: all ease-in-out .2s;
+    width: 45px;
+    height: 45px;
+}
+
+.inputPassIcon:hover {
+    cursor: pointer;
+    background-color: #dfdfdf;
+}
+
+.passOptionsContainer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.passContent {
+    width: 85%;
+    font-size: 16pt;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.strengthBarContainer {
+    content: '';
+    width: 90%;
+    height: 10px;
+    margin-top: 2%;
+    border-radius: 50px;
+}
+
+.passInput {
+    margin: 2% 0;
+    -webkit-appearance: none;
+}
+
+.passInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 6px #00000026;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 15pt;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkmark {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    background-color: #f1f5f9;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.custom-checkbox:hover .checkmark {
+    border-color: var(--cor_secundaria);
+}
+
+.custom-checkbox input:checked~.checkmark {
+    background-color: var(--cor_secundaria);
+    border-color: var(--cor_secundaria);
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    top: 45%;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: opacity 0.15s ease;
+}
+
+.custom-checkbox input:checked~.checkmark::after {
+    opacity: 1;
+}
+
+.custom-checkbox input:checked~.checkmark {
+    background-color: var(--cor_secundaria);
+    border-color: var(--cor_secundaria);
+}
+
+.infosCreatePasswordContainer {
+    width: 90%;
+    margin-bottom: 2%;
+}
+
+.passInput {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.strengthLabel {
+    font-size: 13pt;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.qtd {
+    width: 35px;
+    text-align: center;
+}
+
+.praticasContainer {
+    background-color: var(--cor_principal);
+    color: #fff;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+    padding: 3%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.praticasContainer > h1 {
+    font-size: 30pt;
+}
+
+.praticasBox {
+    display: flex;
+    gap: 20px;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.praticas {
+    background-color: #fff;
+    color: #000;
+    font-size: 15pt;
+    text-align: left;
+    padding: 3%;
+    border-radius: 10px;
+    width: 35%;
+    line-height: 25px;
+}
+
+.praticasTitle {
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--cor_terciaria);
+    color: #94a3b8;
+    padding: 3rem 1.5rem 1.5rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    color: #f8fafc;
+    margin-bottom: 1rem;
+}
+
+.footer-desc {
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a,
+.footer-bottom a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-bottom a:hover {
+    color: #38bdf8;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #94a3b8;
+    font-size: 1.2rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1e293b;
+    text-align: center;
+    font-size: 0.85rem;
+}
