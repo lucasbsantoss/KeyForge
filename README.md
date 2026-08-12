@@ -9,8 +9,11 @@ Uma aplicação web simples, intuitiva e responsiva para geração de senhas num
 
 ## 📸 Demonstração
 
-![Preview do Projeto](./assets/preview.png)
-*(Adicione uma imagem ou GIF do projeto funcionando aqui)*
+![Texto alternativo](https://github.com/lucasbsantoss/AuthPass/blob/main/imgs/website.png?raw=true)
+
+![Texto alternativo](https://github.com/lucasbsantoss/AuthPass/blob/main/imgs/website2.png?raw=true)
+
+![Texto alternativo](https://github.com/lucasbsantoss/AuthPass/blob/main/imgs/website3.png?raw=true)
 
 ---
 
