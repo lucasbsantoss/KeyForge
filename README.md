@@ -3,7 +3,7 @@ AuthPass — Gerador de senhas seguras construído com HTML5, CSS3 e JavaScript 
 
 Uma aplicação web simples, intuitiva e responsiva para geração de senhas numéricas, alfanuméricas e com caracteres especiais de alta segurança.
 
-> 🔗 **Acesse o projeto online:** [Clique aqui para testar](https://seu-usuario.github.io/nome-do-repositorio/)
+> 🔗 **Acesse o projeto online:** [Clique aqui para testar](https://lucasbsantoss.github.io/AuthPass/)
 
 ---
 
