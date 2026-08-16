@@ -1,19 +1,19 @@
-# 🔐 AuthPass - Gerador de Senhas Seguras
-AuthPass — Gerador de senhas seguras construído com HTML5, CSS3 e JavaScript Vanilla. Inclui cálculo de força dinâmico, filtros customizáveis e interface responsiva.
+# 🔐 KeyForge - Gerador de Senhas Seguras
+KeyForge — Gerador de senhas seguras construído com HTML5, CSS3 e JavaScript Vanilla. Inclui cálculo de força dinâmico, filtros customizáveis e interface responsiva.
 
 Uma aplicação web simples, intuitiva e responsiva para geração de senhas numéricas, alfanuméricas e com caracteres especiais de alta segurança.
 
-> 🔗 **Acesse o projeto online:** [Clique aqui para testar](https://lucasbsantoss.github.io/AuthPass/)
+> 🔗 **Acesse o projeto online:** [Clique aqui para testar](https://lucasbsantoss.github.io/KeyForge/)
 
 ---
 
 ## 📸 Demonstração
 
-![Texto alternativo](https://github.com/lucasbsantoss/AuthPass/blob/main/imgs/website.png?raw=true)
+![Texto alternativo](https://github.com/lucasbsantoss/KeyForge/blob/main/imgs/website.png?raw=true)
 
-![Texto alternativo](https://github.com/lucasbsantoss/AuthPass/blob/main/imgs/website2.png?raw=true)
+![Texto alternativo](https://github.com/lucasbsantoss/KeyForge/blob/main/imgs/website2.png?raw=true)
 
-![Texto alternativo](https://github.com/lucasbsantoss/AuthPass/blob/main/imgs/website3.png?raw=true)
+![Texto alternativo](https://github.com/lucasbsantoss/KeyForge/blob/main/imgs/website3.png?raw=true)
 
 ---
 
