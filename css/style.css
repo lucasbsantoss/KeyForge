@@ -32,6 +32,7 @@
     text-align: center;
     background-color: var(--cor_principal);
     color: #fff;
+    font-size: 11pt;
 }
 
 .firstBubble>h1 {
@@ -323,4 +324,131 @@ footer {
     border-top: 1px solid #1e293b;
     text-align: center;
     font-size: 0.85rem;
+}
+
+/* =======================================================
+   . MOBILE (480px)
+   ======================================================= */
+@media screen and (max-width: 767px) {
+    .firstBubble, .generateContainer {
+        width: 90%;
+        padding: 5% 2.7%;
+    }
+
+    .firstBubble > h1 {
+        font-size: 20pt;
+    }
+
+    .passOptionsContainer {
+        flex-direction: column;
+    }
+
+    .inputContainer {
+        margin: 5% 0;
+    }
+
+    .praticasContainer {
+        width: 90%;
+    }
+
+    .praticasContainer > h1 {
+        font-size: 20pt;
+    }
+
+    .praticasBox {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .praticas {
+        width: 100%;
+    }
+}
+
+/* =======================================================
+   . TABLETS / iPAD (768px até 1023px)
+   ======================================================= */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .firstBubble, .generateContainer {
+        width: 95%;
+        padding: 5% 2.7%;
+    }
+
+    .praticasContainer {
+        width: 95%;
+    }
+
+    .praticasContainer > h1 {
+        font-size: 23pt;
+    }
+
+    .praticasBox {
+        flex-direction: column;
+    }
+
+    .praticas {
+        width: 100%;
+    }
+
+    .praticasTitle {
+        font-size: 18pt;
+    }
+}
+
+
+/* =======================================================
+   . NOTEBOOKS E TELAS GRANDES (a partir de 1024px)
+   ======================================================= */
+@media screen and (min-width: 1024px) {
+    .firstBubble, .generateContainer {
+        width: 95%;
+        padding: 5% 2.7%;
+    }
+
+    .praticasContainer {
+        width: 95%;
+    }
+
+    .praticasContainer > h1 {
+        font-size: 23pt;
+    }
+
+    .praticasBox {
+        flex-direction: column;
+    }
+
+    .praticas {
+        width: 100%;
+    }
+
+    .praticasTitle {
+        font-size: 18pt;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .main {
+        max-width: 1000px;
+    }
+
+    .firstBubble, .generateContainer {
+        width: 80%;
+        padding: 5% 2.7%;
+    }
+
+    .firstBubble > h1, .praticasContainer > h1 {
+        font-size: 21pt;
+    }
+
+    .praticasContainer {
+        width: 95%;
+    }
+
+    .inputContainer {
+        margin: 5% 0;
+    }
+
+    .praticasBox {
+        flex-direction: row;
+    }
 }
