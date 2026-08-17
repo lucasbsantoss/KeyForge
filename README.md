@@ -9,11 +9,9 @@ Uma aplicação web simples, intuitiva e responsiva para geração de senhas num
 
 ## 📸 Demonstração
 
-![Texto alternativo](https://github.com/lucasbsantoss/KeyForge/blob/main/imgs/website.png?raw=true)
+![Texto alternativo](https://github.com/lucasbsantoss/KeyForge/blob/main/imgs/website1.png?raw=true)
 
 ![Texto alternativo](https://github.com/lucasbsantoss/KeyForge/blob/main/imgs/website2.png?raw=true)
-
-![Texto alternativo](https://github.com/lucasbsantoss/KeyForge/blob/main/imgs/website3.png?raw=true)
 
 ---
 
