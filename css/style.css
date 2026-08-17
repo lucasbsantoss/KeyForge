@@ -1,9 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-    --cor_principal: #236a9a;
-    --cor_secundaria: #6abaf0;
-    --cor_terciaria: #112635;
+    /* Superfícies e Fundos */
+    --bg-page: #0f172a;
+    --bg-card: #1e293b;
+    --bg-input: #0b1120;
+    
+    /* Bordas e Divisórias */
+    --border-color: #334155;
+
+    /* Cores de Destaque */
+    --accent-blue: #38bdf8;
+    --accent-hover: #0ea5e9;
+
+    /* Tipografia e Textos */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    /* Indicador de Força de Senha */
+    --strength-weak: #ef4444;
+    --strength-medium: #f59e0b;
+    --strength-strong: #10b981;
 }
 
 * {
@@ -13,128 +31,144 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
 .main {
     width: 90%;
     margin: 0 auto;
-    background-color: var(--cor_secundaria);
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2% 0 15% 0;
-    border-radius: 10px 10px 0 0;
+    padding: 3rem 0 5rem 0;
+    gap: 3rem;
 }
 
 .firstBubble {
     width: 45%;
-    border-radius: 10px;
-    padding: 3%;
-    margin-bottom: 10%;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
     text-align: center;
-    background-color: var(--cor_principal);
-    color: #fff;
-    font-size: 11pt;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px -5px #0000004d;
+    color: var(--text-primary);
 }
 
-.firstBubble>h1 {
-    margin-bottom: 40px;
+.firstBubble > h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.firstBubble > h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    line-height: 1.5;
 }
 
 .generateContainer {
-    background-color: var(--cor_principal);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px -5px #0000004d;
     width: 45%;
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 18pt;
-    padding: 1%;
-    margin-bottom: 15%;
-    color: #fff;
+    padding: 2rem;
+    color: var(--text-primary);
 }
 
-.generateContainer>p {
-    padding-bottom: 50px;
+.infosCreatePasswordContainer {
+    width: 100%;
+    margin-bottom: 1.5rem;
 }
 
-.inputGenerate {
-    background-color: var(--cor_terciaria);
-    width: 90%;
-    padding: 3%;
-    border-radius: 12px;
-    text-indent: 3%;
+.infosCreatePasswordContainer > p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.inputContainer {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    color: #fff;
-    gap: 10px;
-}
-
-.inputButtonsContainer {
-    display: flex;
     gap: 15px;
-}
-
-.inputPassIcon {
-    border: none;
-    background-color: #fff;
-    border-radius: 12px;
-    font-size: 18pt;
-    transition: all ease-in-out .2s;
-    width: 45px;
-    height: 45px;
-}
-
-.inputPassIcon:hover {
-    cursor: pointer;
-    background-color: #dfdfdf;
-}
-
-.passOptionsContainer {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.passContent {
-    width: 85%;
-    font-size: 16pt;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.strengthBarContainer {
-    content: '';
-    width: 90%;
-    height: 10px;
-    margin-top: 2%;
-    border-radius: 50px;
+    margin-bottom: 1.5rem;
 }
 
 .passInput {
-    margin: 2% 0;
+    width: 100%;
+    height: 6px;
+    border-radius: 6px;
+    background: var(--border-color);
+    outline: none;
     -webkit-appearance: none;
+    cursor: pointer;
 }
 
 .passInput::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
-    background: #fff;
+    background: var(--accent-blue);
     cursor: pointer;
-    box-shadow: 0 2px 6px #00000026;
+    box-shadow: 0 0 10px #38bdf880;
     transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.passInput::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    background-color: #fff;
+}
+
+.qtd {
+    min-width: 35px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+}
+
+.passOptionsContainer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .custom-checkbox {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     cursor: pointer;
-    user-select: none;
-    font-size: 15pt;
-    user-select: none;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.custom-checkbox,
+.custom-checkbox .label-text,
+.custom-checkbox .checkmark {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+.custom-checkbox:hover {
+    color: var(--text-primary);
 }
 
 .custom-checkbox input[type="checkbox"] {
@@ -146,119 +180,156 @@
 
 .checkmark {
     position: relative;
-    width: 20px;
-    height: 20px;
-    box-sizing: border-box;
-    background-color: #f1f5f9;
-    border: 2px solid #cbd5e1;
-    border-radius: 6px;
+    width: 18px;
+    height: 18px;
+    background-color: var(--bg-input);
+    border: 1.5px solid var(--border-color);
+    border-radius: 5px;
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .custom-checkbox:hover .checkmark {
-    border-color: var(--cor_secundaria);
+    border-color: var(--accent-blue);
 }
 
-.custom-checkbox input:checked~.checkmark {
-    background-color: var(--cor_secundaria);
-    border-color: var(--cor_secundaria);
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: var(--accent-blue);
+    border-color: var(--accent-blue);
 }
 
 .checkmark::after {
     content: "";
     position: absolute;
     opacity: 0;
-    left: 50%;
-    top: 45%;
-    width: 5px;
-    height: 10px;
-    border: solid white;
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid #0f172a;
     border-width: 0 2px 2px 0;
-    transform: translate(-50%, -50%) rotate(45deg);
+    transform: rotate(45deg);
     transition: opacity 0.15s ease;
 }
 
-.custom-checkbox input:checked~.checkmark::after {
+.custom-checkbox input:checked ~ .checkmark::after {
     opacity: 1;
 }
 
-.custom-checkbox input:checked~.checkmark {
-    background-color: var(--cor_secundaria);
-    border-color: var(--cor_secundaria);
-}
-
-.infosCreatePasswordContainer {
-    width: 90%;
-    margin-bottom: 2%;
-}
-
-.passInput {
+.inputGenerate {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
     width: 100%;
-    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.passContent {
+    width: 100%;
+    font-family: 'DM Mono', monospace;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    color: var(--accent-blue);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.inputButtonsContainer {
+    display: flex;
+    gap: 8px;
+}
+
+.inputPassIcon {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.inputPassIcon:hover {
+    background-color: var(--accent-blue);
+    color: #0f172a;
+    border-color: var(--accent-blue);
+}
+
+.strengthBarContainer {
+    width: 100%;
+    height: 6px;
+    margin-top: 1rem;
+    border-radius: 50px;
+    background-color: var(--border-color);
+    overflow: hidden;
 }
 
 .strengthLabel {
-    font-size: 13pt;
-    margin-top: 10px;
+    font-size: 0.85rem;
+    margin-top: 8px;
     text-transform: uppercase;
-    font-weight: bold;
-}
-
-.inputContainer {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.qtd {
-    width: 35px;
-    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
 }
 
 .praticasContainer {
-    background-color: var(--cor_principal);
-    color: #fff;
-    border-radius: 10px;
+    background-color: transparent;
+    color: var(--text-primary);
     width: 80%;
     text-align: center;
-    padding: 3%;
-    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
 }
 
 .praticasContainer > h1 {
-    font-size: 30pt;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
 }
 
 .praticasBox {
     display: flex;
     gap: 20px;
-    margin-top: 5%;
     width: 100%;
 }
 
 .praticas {
-    background-color: #fff;
-    color: #000;
-    font-size: 15pt;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px -5px #0000004d;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
     text-align: left;
-    padding: 3%;
-    border-radius: 10px;
-    width: 35%;
-    line-height: 25px;
+    padding: 1.8rem;
+    border-radius: 12px;
+    width: 33.33%;
+    line-height: 1.6;
 }
 
 .praticasTitle {
-    font-weight: bold;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.05rem;
+    display: block;
 }
 
 footer {
-    background-color: var(--cor_terciaria);
-    color: #94a3b8;
+    background-color: var(--bg-card);
+    color: var(--text-secondary);
     padding: 3rem 1.5rem 1.5rem;
     font-size: 0.9rem;
-    border-top: 1px solid #1e293b;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-container {
@@ -272,7 +343,7 @@ footer {
 
 .footer-col h3,
 .footer-col h4 {
-    color: #f8fafc;
+    color: var(--text-primary);
     margin-bottom: 1rem;
 }
 
@@ -292,14 +363,14 @@ footer {
 
 .footer-links a,
 .footer-bottom a {
-    color: #94a3b8;
+    color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .footer-links a:hover,
 .footer-bottom a:hover {
-    color: #38bdf8;
+    color: var(--accent-blue);
 }
 
 .social-links {
@@ -308,13 +379,13 @@ footer {
 }
 
 .social-links a {
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-size: 1.2rem;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .social-links a:hover {
-    color: #38bdf8;
+    color: var(--accent-blue);
     transform: translateY(-2px);
 }
 
@@ -322,43 +393,49 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 1.5rem;
-    border-top: 1px solid #1e293b;
+    border-top: 1px solid var(--border-color);
     text-align: center;
     font-size: 0.85rem;
 }
 
 /* =======================================================
-   . MOBILE (480px)
+   RESPONSIVIDADE (MEDIA QUERIES)
    ======================================================= */
+
+/* MOBILE (até 767px) */
 @media screen and (max-width: 767px) {
-    .firstBubble, .generateContainer {
-        width: 90%;
-        padding: 5% 2.7%;
+    .main {
+        width: 100%;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .firstBubble, 
+    .generateContainer {
+        width: 100%;
+        padding: 1.5rem;
     }
 
     .firstBubble > h1 {
-        font-size: 20pt;
+        font-size: 1.3rem;
     }
 
     .passOptionsContainer {
         flex-direction: column;
-    }
-
-    .inputContainer {
-        margin: 5% 0;
+        gap: 10px;
     }
 
     .praticasContainer {
-        width: 90%;
+        width: 100%;
     }
 
     .praticasContainer > h1 {
-        font-size: 20pt;
+        font-size: 1.4rem;
     }
 
     .praticasBox {
         flex-direction: column;
-        gap: 30px;
+        gap: 1.5rem;
     }
 
     .praticas {
@@ -366,87 +443,40 @@ footer {
     }
 }
 
-/* =======================================================
-   . TABLETS / iPAD (768px até 1023px)
-   ======================================================= */
+/* TABLETS (768px até 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .firstBubble, .generateContainer {
-        width: 95%;
-        padding: 5% 2.7%;
-    }
-
-    .praticasContainer {
-        width: 95%;
-    }
-
-    .praticasContainer > h1 {
-        font-size: 23pt;
-    }
-
-    .praticasBox {
-        flex-direction: column;
-    }
-
-    .praticas {
-        width: 100%;
-    }
-
-    .praticasTitle {
-        font-size: 18pt;
-    }
-}
-
-
-/* =======================================================
-   . NOTEBOOKS E TELAS GRANDES (a partir de 1024px)
-   ======================================================= */
-@media screen and (min-width: 1024px) {
-    .firstBubble, .generateContainer {
-        width: 95%;
-        padding: 5% 2.7%;
-    }
-
-    .praticasContainer {
-        width: 95%;
-    }
-
-    .praticasContainer > h1 {
-        font-size: 23pt;
-    }
-
-    .praticasBox {
-        flex-direction: column;
-    }
-
-    .praticas {
-        width: 100%;
-    }
-
-    .praticasTitle {
-        font-size: 18pt;
-    }
-}
-
-@media screen and (min-width: 1025px) {
-    .main {
-        max-width: 1000px;
-    }
-
-    .firstBubble, .generateContainer {
+    .firstBubble, 
+    .generateContainer {
         width: 80%;
-        padding: 5% 2.7%;
-    }
-
-    .firstBubble > h1, .praticasContainer > h1 {
-        font-size: 21pt;
     }
 
     .praticasContainer {
-        width: 95%;
+        width: 80%;
     }
 
-    .inputContainer {
-        margin: 5% 0;
+    .praticasBox {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .praticas {
+        width: 100%;
+    }
+}
+
+/* DESKTOP / NOTEBOOKS (a partir de 1024px) */
+@media screen and (min-width: 1024px) {
+    .main {
+        max-width: 1100px;
+    }
+
+    .firstBubble, 
+    .generateContainer {
+        width: 550px;
+    }
+
+    .praticasContainer {
+        width: 100%;
     }
 
     .praticasBox {
